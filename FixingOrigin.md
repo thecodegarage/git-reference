@@ -5,10 +5,12 @@ Q:  I committed and pushed some directory to github. After that, I altered the .
 
 A: The rules in your .gitignore file only apply to untracked files. Since the files under that directory were already committed in your repository, you have to unstage them, create a commit, and push that to GitHub:
 
-
+```
 $ git rm -r --cached some-directory
 $ git commit -m 'Remove the now ignored directory "some-directory"'
 $ git push origin master
+```
+
 
 
 ### ___
